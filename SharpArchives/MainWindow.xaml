@@ -10,7 +10,7 @@
         <CheckBox Content="Szukaj w tytułach i opisach" HorizontalAlignment="Left" Margin="184,197,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
         <Label Content="Multimedialne archiwum" HorizontalAlignment="Left" Margin="201,49,0,0" VerticalAlignment="Top" Height="25" Width="141"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="196,157,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Szukaj" HorizontalAlignment="Left" Margin="328,157,0,0" VerticalAlignment="Top" Width="52"/>
+        <Button Content="Szukaj" HorizontalAlignment="Left" Margin="328,157,0,0" VerticalAlignment="Top" Width="52" Click="Button_Click"/>
 
     </Grid>
 </Window>
