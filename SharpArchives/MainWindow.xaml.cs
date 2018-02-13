@@ -20,22 +20,14 @@ namespace SharpArchives
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string Value { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = this;
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            // MessageBox.Show(Value.ToString());
-            Main.Content = new archiwum();
         }
     }
 }
