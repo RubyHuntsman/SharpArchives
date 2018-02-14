@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Excel = Microsoft.Office.Interop.Excel;
+using SharpArchives.ViewModels;
 
 namespace SharpArchives
 {
@@ -21,29 +23,61 @@ namespace SharpArchives
     /// </summary>
     public partial class MainWindow : Window
     {
+        string theText;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox objTextBox = (TextBox)sender;
+            theText = objTextBox.Text;
+        }
+
+        private void Advanced_Search_Check(object sender, RoutedEventArgs e)
         {
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string archivesPath = "C:\\archiwum";
-            string readmePath = @"C:\archiwum\Czytaj_to.txt";
-            string[] readme = {"INSTRUKCJA DO PROGRAMU... Napisac.. ", "1", "2"};
+            if (theText != null)
+            {
+                DataContext = new ResultsViewModel();
+                MessageBox.Show(theText);
+            }
+            else
+                MessageBox.Show("Pole nie może być puste!");
 
-            if (!File.Exists(readmePath))
-              File.Create(readmePath);
-            
-            File.WriteAllLines(readmePath, readme);
 
-            if (!Directory.Exists(archivesPath))
-              Directory.CreateDirectory(archivesPath);
         }
+
+
+        //public void Button_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //    Excel.Application xlApp = new Excel.Application();
+        //    Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\excel_file\2017_opis_dokumentów_cyfrowych.xls");
+        //    Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+        //    Excel.Range xlRange = xlWorksheet.UsedRange;
+
+
+        //    int rowCount = xlRange.Rows.Count;
+        //    int colCount = xlRange.Columns.Count;
+
+        //    MessageBox.Show(rowCount.ToString());
+        //    string archivesPath = "C:\\archiwum";
+        //    string readmePath = @"C:\archiwum\Czytaj_to.txt";
+        //    string[] readme = {"INSTRUKCJA DO PROGRAMU... Napisac.. ", "1", "2"};
+
+        //    if (!File.Exists(readmePath))
+        //      File.Create(readmePath);
+
+        //    File.WriteAllLines(readmePath, readme);
+
+        //    if (!Directory.Exists(archivesPath))
+        //      Directory.CreateDirectory(archivesPath);
+        //}
     }
 }
