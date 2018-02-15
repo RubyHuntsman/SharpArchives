@@ -9,47 +9,47 @@
         mc:Ignorable="d"
         WindowState="Maximized"
         WindowStyle="None">
-    <Window.Resources>
-        <DataTemplate x:Name="ResultViewTemplate" DataType="{x:Type viewmodels:ResultsViewModel}">
-            <views:Results DataContext="{Binding}"/>
-        </DataTemplate>
-    </Window.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBox x:Name="Input" Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="5" BorderThickness="1" BorderBrush="#FF7A7171" FontSize="16" Padding="5" FontFamily="Segoe UI Light" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextAlignment="Center" TextChanged="TextBox_TextChanged"/>
-        <Button Grid.Column="7" Grid.Row="11" FontFamily="Segoe UI Light" Background="#FFE8E1E1" BorderBrush="#FF7A7171" Click="Button_Click">Szukaj</Button>
-        <Label Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="10" Content="MULTIMEDIALNE ARCHIWUM ZIEMI CHRZANOWSKIEJ" FontFamily="Segoe UI Historic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Margin="0,1,0,43" Grid.RowSpan="2"></Label>
-        <CheckBox x:Name="Advanced" Grid.Column="3" Grid.Row="12" Grid.ColumnSpan="4" BorderBrush="#FF7A7171" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Light" Checked="Advanced_Search_Check">Wyszukiwanie zaawansowane</CheckBox>
+  <Window.Resources>
+    <DataTemplate x:Name="ResultViewTemplate" DataType="{x:Type viewmodels:ResultsViewModel}">
+      <views:Results DataContext="{Binding}"/>
+    </DataTemplate>
+  </Window.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <TextBox x:Name="Input" Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="5" BorderThickness="1" BorderBrush="#FF7A7171" FontSize="16" Padding="5" FontFamily="Segoe UI Light" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextAlignment="Center" TextChanged="TextBox_TextChanged"/>
+    <Button Grid.Column="7" Grid.Row="11" FontFamily="Segoe UI Light" Background="#FFE8E1E1" BorderBrush="#FF7A7171" Click="Button_Click">Szukaj</Button>
+    <Label Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="10" Content="MULTIMEDIALNE ARCHIWUM ZIEMI CHRZANOWSKIEJ" FontFamily="Segoe UI Historic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Margin="0,1,0,43" Grid.RowSpan="2"></Label>
+    <CheckBox x:Name="Advanced" Grid.Column="3" Grid.Row="12" Grid.ColumnSpan="4" BorderBrush="#FF7A7171" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Light" Checked="Advanced_Search_Check">Wyszukiwanie zaawansowane</CheckBox>
 
-        <ContentControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="16" Content="{Binding}"/>
-    </Grid>
+    <ContentControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="16"/>
+  </Grid>
 </Window>
