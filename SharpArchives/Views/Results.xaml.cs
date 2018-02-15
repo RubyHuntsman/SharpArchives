@@ -24,5 +24,21 @@ namespace SharpArchives.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Search(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("szukasz czegoś");
+        }
+
+        private void Button_Back(object sender, RoutedEventArgs e)
+        {
+            var Main = new MainWindow();
+            Main.Show();
+        }
+
+        private void Button_Advanced_Search(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
