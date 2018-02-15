@@ -49,6 +49,5 @@
         <ListBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="8"></ListBox>
         <ListBox Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="9" Grid.RowSpan="15"></ListBox>
         <Button Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" FontFamily="Segoe UI Semibold" Click="Button_Advanced_Search">Q zaawansowane</Button>
-        <views:Advanced Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Grid.RowSpan="6" Visibility="Hidden" Loaded="Advanced_Loaded" />
     </Grid>
 </UserControl>
